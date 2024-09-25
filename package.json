@@ -36,15 +36,16 @@
         "docs/static/icons/favicon.ico"
     ],
     "devDependencies": {
-        "@types/marked": "0.3.0",
-        "@types/node": "8.10.66",
-        "@types/web-bluetooth": "0.0.4",
-        "semantic-ui-less": "2.4.1",
-        "typescript": "^4.2.3"
+        "marked": "14.1.2",
+        "@types/node": "20.0.0",
+        "@types/web-bluetooth": "0.0.20",
+        "semantic-ui-less": "2.5.0",
+        "typescript": "5.1.6"
     },
     "dependencies": {
-        "pxt-common-packages": "10.1.1",
-        "pxt-core": "8.1.1",
+        "pxt": "^0.5.1",
+        "pxt-common-packages": "12.1.1",
+        "pxt-core": "10.1.4"
     },
     "scripts": {
         "test": "node node_modules/pxt-core/built/pxt.js travis",
