@@ -22,11 +22,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'npm'
       - name: npm install
-        run: |
-          sudo apt-get install xvfb
-          sudo npm install -g pxt
-          npm install
+        run: npm ci
+#          sudo apt-get install xvfb
+#          sudo npm install -g pxt
+#          npm install
 #      - name: pxt ci
 #        run: |
 #          pxt ci
