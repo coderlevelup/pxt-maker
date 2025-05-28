@@ -45,11 +45,7 @@ jobs:
         uses: 'google-github-actions/setup-gcloud@v2'
         with:
           version: '>= 390.0.0'
-          
-      - name: ls
-        run: |
-          ls
-          
+                    
       - name: deploy
         run: |
           gcloud app deploy
