@@ -1,0 +1,47 @@
+name: deploy
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: npm install
+        run: |
+          sudo apt-get install xvfb
+          sudo npm install -g pxt
+          npm install
+      - name: pxt ci
+        run: |
+          pxt ci
+        env:
+          CHROME_BIN: chromium-browser
+          DISPLAY: :99.0
+          CI: true
+      
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v2'
+        with:
+          workload_identity_provider: 'projects/240743940157/locations/global/workloadIdentityPools/github/providers/pxt-maker'
+          service_account: 'deploy-service-account@maker-labs-461209.iam.gserviceaccount.com'
+
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v2'
+        with:
+          version: '>= 390.0.0'
+          
+      - name: deploy
+        run: |
+          gcloud app deploy
