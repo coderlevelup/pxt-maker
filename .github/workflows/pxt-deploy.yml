@@ -24,7 +24,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - name: npm install
-        run: npm ci
+        run: npm install
 #          sudo apt-get install xvfb
 #          sudo npm install -g pxt
 #          npm install
