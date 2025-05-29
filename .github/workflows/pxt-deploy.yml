@@ -49,4 +49,4 @@ jobs:
                     
       - name: deploy
         run: |
-          gcloud app deploy
+          gcloud app deploy --verbosity=debug
