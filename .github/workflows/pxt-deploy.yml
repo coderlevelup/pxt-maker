@@ -46,18 +46,8 @@ jobs:
         run: |
             rm -Rf node_modules/pxt-core
             rm -Rf node_modules/pxt-common-packages
-            pxt link ./pxt
-            pxt link ./pxt-common-packages
-#          sudo apt-get install xvfb
-#          sudo npm install -g pxt
-#          npm install
-#      - name: pxt ci
-#        run: |
-#          pxt ci
-#        env:
-#          CHROME_BIN: chromium-browser
-#          DISPLAY: :99.0
-#          CI: true
+            npx pxt link ./pxt
+            npx pxt link ./pxt-common-packages
       
       - id: 'auth'
         uses: 'google-github-actions/auth@v2'
