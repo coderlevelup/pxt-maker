@@ -1,1 +1,6 @@
-npx pxt serve --noBrowser -h 0.0.0.0 -p $PORT
+chmod +x ./launch.sh
+
+rm -Rf node_modules/pxt-core
+rm -Rf node_modules/pxt-common-packages
+pxt link ./pxt
+pxt link ./pxt-common-packages
