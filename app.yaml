@@ -25,4 +25,6 @@ readiness_check:
   timeout_sec: 4
   failure_threshold: 4
   success_threshold: 2
-  initial_delay_sec: 1000
+  app_start_timeout_sec: 1000
+
+
