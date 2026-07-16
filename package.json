@@ -49,17 +49,12 @@
         "typescript": "4.8.3"
     },
     "dependencies": {
-        "pxt": "^0.5.1",
         "pxt-common-packages": "13.2.3",
         "pxt-core": "13.1.5"
     },
     "scripts": {
         "test": "node node_modules/pxt-core/built/pxt.js travis",
-        "svgo": "glob-exec --foreach \"**/boardhd.svg\" -- \"svgo --config=svgo.yml {{file}} -o {{file.dir}}/board.svg \"",
-        "build": "chmod +x ./build.sh && ./build.sh",
-        "gcp-build": "",
-        "start": "./launch.sh",
-        "pxt": "pxt"
+        "svgo": "glob-exec --foreach \"**/boardhd.svg\" -- \"svgo --config=svgo.yml {{file}} -o {{file.dir}}/board.svg \""
     },
     "overrides": {
         "@blockly/field-grid-dropdown": {
