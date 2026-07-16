@@ -1,6 +1,6 @@
 {
     "name": "pxt-maker",
-    "version": "0.15.70",
+    "version": "0.15.76",
     "description": "Microsoft MakeCode Maker Boards",
     "public": true,
     "keywords": [
@@ -51,7 +51,7 @@
     "dependencies": {
         "pxt": "^0.5.1",
         "pxt-common-packages": "13.2.3",
-        "pxt-core": "12.2.8"
+        "pxt-core": "13.1.5"
     },
     "scripts": {
         "test": "node node_modules/pxt-core/built/pxt.js travis",
@@ -60,5 +60,13 @@
         "gcp-build": "",
         "start": "./launch.sh",
         "pxt": "pxt"
+    },
+    "overrides": {
+        "@blockly/field-grid-dropdown": {
+            "blockly": "13.1.1"
+        },
+        "@blockly/plugin-workspace-search": {
+            "blockly": "13.1.1"
+        }
     }
 }
