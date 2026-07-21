@@ -3,56 +3,55 @@ declare namespace pins {
   const LED: PwmOnlyPin;
 
   //% fixedInstance shim=pxt::getPin(PIN_P0)
-  const P0: PwmPin;
+  const GP0: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P1)
-  const P1: PwmPin;
+  const GP1: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P2)
-  const P2: PwmPin;
+  const GP2: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P3)
-  const P3: PwmPin;
+  const GP3: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P4)
-  const P4: PwmPin;
+  const GP4: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P5)
-  const P5: PwmPin;
+  const GP5: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P6)
-  const P6: PwmPin;
+  const GP6: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P7)
-  const P7: PwmPin;
+  const GP7: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P8)
-  const P8: PwmPin;
+  const GP8: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P9)
-  const P9: PwmPin;
-
+  const GP9: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P10)
-  const P10: PwmPin;
+  const GP10: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P11)
-  const P11: PwmPin;
+  const GP11: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P12)
-  const P12: PwmPin;
+  const GP12: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P13)
-  const P13: PwmPin;
+  const GP13: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P14)
-  const P14: PwmPin;
+  const GP14: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P15)
-  const P15: PwmPin;
+  const GP15: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P16)
-  const P16: PwmPin;
+  const GP16: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P17)
-  const P17: PwmPin;
+  const GP17: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P18)
-  const P18: PwmPin;
+  const GP18: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P19)
-  const P19: PwmPin;
-
+  const GP19: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P20)
-  const P20: PwmPin;
+  const GP20: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P21)
-  const P21: PwmPin;
+  const GP21: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P22)
-  const P22: PwmPin;
-
+  const GP22: PwmPin;
   //% fixedInstance shim=pxt::getPin(PIN_P26)
-  const P26: AnalogInPin;
+  const GP26: AnalogInPin;
   //% fixedInstance shim=pxt::getPin(PIN_P27)
-  const P27: AnalogInPin;
+  const GP27: AnalogInPin;
+  //% fixedInstance shim=pxt::getPin(PIN_P28)
+  const GP28: AnalogInPin;
 }

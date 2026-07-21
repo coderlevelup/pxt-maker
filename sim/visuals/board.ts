@@ -16,6 +16,15 @@ namespace pxsim.visuals {
     stroke: #404040;
     fill: #000000;
 }
+.sim-transparent-pins .sim-board-pin {
+    stroke: none;
+    fill: transparent;
+}
+.sim-transparent-pins .sim-board-pin.highlight {
+    stroke: #FF5500;
+    stroke-width: 2px;
+    fill: rgba(255, 165, 0, 0.35);
+}
 .sim-board-button {
     stroke: #aaa;
     stroke-width: 3px;
@@ -116,6 +125,8 @@ namespace pxsim.visuals {
 
             const el = this.getView().el;
             this.addDefs(el);
+            if ((props.visualDef as any).transparentPins)
+                U.addClass(el, "sim-transparent-pins");
 
             this.onBoardLeds = []
             this.onBoardNeopixels = [];

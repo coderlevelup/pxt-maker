@@ -7,6 +7,10 @@ namespace pxsim {
 
     export function pinByName(name: string) {
         let v = pinIds[name]
+        if (v == null && /^GP\d+$/.test(name)) {
+            // boards labeled GPnn (e.g. rpi-pico) configure pins as PIN_Pnn
+            v = pinIds[name.substring(1)]
+        }
         if (v == null) {
             v = getConfig(getConfigKey("PIN_" + name))
         }
@@ -260,7 +264,13 @@ namespace pxsim {
 
     export function parsePinString(pinString: string): Pin {
         const pinName = pinString && pxsim.readPin(pinString);
-        return pinName && pxtcore.getPin(pinIds[pinName]);
+        if (!pinName) return undefined;
+        let v = pinIds[pinName];
+        if (v == null && /^GP\d+$/.test(pinName)) {
+            // boards labeled GPnn (e.g. rpi-pico) configure pins as PIN_Pnn
+            v = pinIds[pinName.substring(1)];
+        }
+        return v == null ? undefined : pxtcore.getPin(v);
     }
 
     export namespace jacdac {
