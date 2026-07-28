@@ -299,8 +299,7 @@
             }
         ],
         "touchPads": [],
-        "buttons": [],
-        "transparentPins": true
+        "buttons": []
     },
     "gpioPinMap": {
         "GP0": "GP0",
